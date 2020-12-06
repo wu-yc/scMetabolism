@@ -63,7 +63,6 @@ scMetabolism also supports quantifying metabolism independent of Seurat.
 `metabolism.type` supports `KEGG` and `REACTOME`, where KEGG contains 76 metabolism pathways and REACTOME contains 77 metabolism pathways.
 
 ## Contact
-PI:
 
 Qiang Gao, MD, PhD
 
