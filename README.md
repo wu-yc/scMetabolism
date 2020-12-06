@@ -2,8 +2,7 @@
 `scMetabolism` is a R package for quantifying metabolism activity at the single-cell resolution
 
 ## Requirements
-    R > 3.6.0
-    R packages: devtools, data.table, wesanderson, Seurat, VISION, AUCell, GSEABase, GSVA, ggplot2
+    install.packages(c("data.table", "wesanderson", "Seurat", "VISION", "AUCell", "GSEABase", "GSVA", "ggplot2"))
     
 
 ## Install
