@@ -44,7 +44,7 @@ To extract the metabolism score, just run `metabolism.matrix <- countexp.Seurat@
 
 This function returns a ggplot object, which can be DIY by users.
 
-![Screenshot](scMetabolism.png)
+![Screenshot](https://github.com/wu-yc/scMetabolism/raw/main/scMetabolism_demo.png)
 
 
 ### 3. Quantify single-cell metabolism WITHOUT Seurat (Not recommended)
