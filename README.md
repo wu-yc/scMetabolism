@@ -23,7 +23,7 @@
 
 `ncores` is the number of threads of parallel computation.
 
-`metabolism.type` supports `KEGG` and `REACTOME`, where KEGG contains 76 metabolism pathways and REACTOME contains 77 metabolism pathways.
+`metabolism.type` supports `KEGG` and `REACTOME`, where KEGG contains 85 metabolism pathways and REACTOME contains 82 metabolism pathways.
 
 To extract the metabolism score, just run `metabolism.matrix <- countexp.Seurat@assays$METABOLISM$score`, where `metabolism.matrix` is the matrix.
 
@@ -58,7 +58,15 @@ scMetabolism also supports quantifying metabolism independent of Seurat.
 
 `ncores` is the number of threads of parallel computation.
 
-`metabolism.type` supports `KEGG` and `REACTOME`, where KEGG contains 76 metabolism pathways and REACTOME contains 77 metabolism pathways.
+`metabolism.type` supports `KEGG` and `REACTOME`, where KEGG contains 85 metabolism pathways and REACTOME contains 82 metabolism pathways.
+
+## Citations
+1. DeTomaso D, et al. Nat Commun. 2019 Sep 26;10(1):4376.
+2. Aibar S, et al. Nat Methods. 2017 Nov;14(11):1083-1086.
+3. Xiao Z, et al. Nat Commun. 2019 Aug 21;10(1):3763.
+4. Hänzelmann S, et al. BMC Bioinformatics. 2013 Jan 16;14:7.
+5. George C. Linderman, et al. bioRxiv 2019.
+
 
 ## Contact
 
