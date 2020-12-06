@@ -1,0 +1,17 @@
+Package: scMetabolism
+Type: Package
+Title: Quantifying the single-cell metabolism activity
+Version: 0.1.0
+Author: Qiang Gao
+Maintainer: Yingcheng Wu <wuyc@mail.com>
+Description: scMetabolism aims to quantify the metabolic activity at the single cell resolution.
+    Use four spaces when indenting paragraphs within the Description.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Imports: data.table, wesanderson, Seurat, VISION, AUCell, GSEABase,
+        GSVA, ggplot2
+Suggests: testthat
+RoxygenNote: 7.1.1
+NeedsCompilation: no
+Packaged: 2020-12-06 10:29:45 UTC; wuyingcheng3
