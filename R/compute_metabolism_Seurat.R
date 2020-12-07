@@ -260,8 +260,8 @@ sc.metabolism.Seurat <- function(obj, method = "VISION", imputation = F, ncores 
     signature_exp<-data.frame(gsva_es)
   }
 
-  countexp.Seurat@assays$METABOLISM$score<-signature_exp
-  countexp.Seurat
+  obj@assays$METABOLISM$score<-signature_exp
+  obj
 }
 
 
