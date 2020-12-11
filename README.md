@@ -1,5 +1,6 @@
 # scMetabolism
 `scMetabolism` is a R package for quantifying metabolism activity at the single-cell resolution
+![Screenshot](https://github.com/wu-yc/scMetabolism/raw/main/logo.jpg)
 
 ## Requirements
     install.packages(c("devtools", "data.table", "wesanderson", "Seurat", "VISION", "AUCell", "GSEABase", "GSVA", "ggplot2"))
