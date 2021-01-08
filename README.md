@@ -3,7 +3,8 @@
 ![Screenshot](https://github.com/wu-yc/scMetabolism/raw/main/logo.jpg)
 
 ## Requirements
-    install.packages(c("devtools", "data.table", "wesanderson", "Seurat", "VISION", "AUCell", "GSEABase", "GSVA", "ggplot2"))
+    install.packages(c("devtools", "data.table", "wesanderson", "Seurat", "devtools", "AUCell", "GSEABase", "GSVA", "ggplot2"))
+    devtools::install_github("YosefLab/VISION")
     
 
 ## Install
@@ -72,11 +73,13 @@ scMetabolism also supports quantifying metabolism independent of Seurat.
 
 Qiang Gao, MD, PhD
 
-Cheung Kong Scholar Distinguished Professor, Department of Liver Surgery and Transplantation, Liver Cancer Institute, Zhongshan Hospital, Fudan University, Shanghai, China
+Cheung Kong Scholar Distinguished Professor
+
+Department of Liver Surgery and Transplantation, Liver Cancer Institute, Zhongshan Hospital, Fudan University, Shanghai, China
 
 gaoqiang@fudan.edu.cn
 
-Any technical question please contact wuyc@usa.com (Yingcheng Wu)
+Any technical question please contact Yingcheng Wu (wuyc@usa.com).
 
 Copyright (C) 2020 Gao Lab @ Fudan University.
 
