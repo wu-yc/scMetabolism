@@ -13,6 +13,8 @@
 ## Quick Start
 `scMetabolism` generally supports the quantification and visualization of metabolism at the single-cell resolution. 
 
+`scMetabolism` currently supports human scRNA-seq data.
+
 ### 1. Quantify single-cell metabolism with Seurat (Recommended)
     countexp.Seurat<-sc.metabolism.Seurat(obj = countexp.Seurat, method = "VISION", imputation = F, ncores = 2, metabolism.type = "KEGG")
 
