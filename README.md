@@ -15,7 +15,13 @@
 
 `scMetabolism` currently supports human scRNA-seq data.
 
-### 1. Quantify single-cell metabolism with Seurat (Recommended)
+
+### 1. Load packages
+    library(scMetabolism)
+    library(ggplot2)
+    library(rsvd)
+
+### 2. Quantify single-cell metabolism with Seurat (Recommended)
     countexp.Seurat<-sc.metabolism.Seurat(obj = countexp.Seurat, method = "VISION", imputation = F, ncores = 2, metabolism.type = "KEGG")
 
 `obj` is a Seurat object containing the UMI count matrix. 
@@ -30,14 +36,14 @@
 
 To extract the metabolism score, just run `metabolism.matrix <- countexp.Seurat@assays$METABOLISM$score`, where `metabolism.matrix` is the matrix.
 
-### 2. Visualize 
-    plot.metabolism(obj = countexp.Seurat, pathway = "Glycolysis / Gluconeogenesis", dimention.reduction.type = "umap", dimention.reduction.run = T, size = 1)
+### 3. Visualize 
+    DimPlot.metabolism(obj = countexp.Seurat, pathway = "Glycolysis / Gluconeogenesis", dimention.reduction.type = "umap", dimention.reduction.run = F, size = 1)
 
-`obj` is a Seurat object containing the UMI count matrix. 
+`countexp.Seurat` is a Seurat object containing the UMI count matrix. 
 
 `pathway` is the pathway of interest to visualize. 
 
-`dimention.reduction.type` supports `UMAP` and `tSNE`.
+`dimention.reduction.type` supports `umap` and `tsne`.
 
 `dimention.reduction.run` allows users to choose whether re-run the dimention reduction of the given Seurat object.
 
@@ -47,8 +53,36 @@ This function returns a ggplot object, which can be DIY by users.
 
 ![Screenshot](https://github.com/wu-yc/scMetabolism/raw/main/scMetabolism_demo.png)
 
+    input.pathway<-c("Glycolysis / Gluconeogenesis", "Oxidative phosphorylation", "Citrate cycle (TCA cycle)")
+    DotPlot.metabolism(obj = countexp.Seurat, pathway = input.pathway, phenotype = "ident", norm = "y")
 
-### 3. Quantify single-cell metabolism WITHOUT Seurat (Not recommended)
+`obj` is a Seurat object containing the UMI count matrix. 
+
+`pathway` is the pathway of interest to visualize. 
+
+`phenotype` is the one of the features contained in the metadata in the Seurat object.
+
+`norm` refers to scale the value according to row or column. Users can choose "x", "y", and "na".
+
+This function returns a ggplot object, which can be DIY by users.
+
+![Screenshot](https://github.com/wu-yc/scMetabolism/raw/main/scMetabolism_demo.png)
+
+    BoxPlot.metabolism(obj = countexp.Seurat, pathway = input.pathway, phenotype = "ident", ncol = 1)
+
+`obj` is a Seurat object containing the UMI count matrix. 
+
+`pathway` is the pathway of interest to visualize. 
+
+`phenotype` is the one of the features contained in the metadata in the Seurat object.
+
+`ncol` refers to the column number per row.
+
+This function returns a ggplot object, which can be DIY by users.
+
+![Screenshot](https://github.com/wu-yc/scMetabolism/raw/main/scMetabolism_demo.png)
+
+### 4. Quantify single-cell metabolism WITHOUT Seurat (Not recommended)
 scMetabolism also supports quantifying metabolism independent of Seurat. 
 
     metabolism.matrix<-sc.metabolism(countexp = countexp, method = "VISION", imputation = F, ncores = 2, metabolism.type = "KEGG")
