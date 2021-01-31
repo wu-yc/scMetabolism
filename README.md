@@ -3,7 +3,7 @@
 ![Screenshot](https://github.com/wu-yc/scMetabolism/raw/main/logo.jpg)
 
 ## Requirements
-    install.packages(c("devtools", "data.table", "wesanderson", "Seurat", "devtools", "AUCell", "GSEABase", "GSVA", "ggplot2"))
+    install.packages(c("devtools", "data.table", "wesanderson", "Seurat", "devtools", "AUCell", "GSEABase", "GSVA", "ggplot2","rsvd"))
     devtools::install_github("YosefLab/VISION")
     
 
