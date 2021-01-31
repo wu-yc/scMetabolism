@@ -2,7 +2,7 @@
 % Please edit documentation in R/compute_metabolism.R
 \name{sc.metabolism}
 \alias{sc.metabolism}
-\title{A Cat Function}
+\title{scMetabolism}
 \usage{
 sc.metabolism(
   countexp,
@@ -12,13 +12,10 @@ sc.metabolism(
   metabolism.type = "KEGG"
 )
 }
-\arguments{
-\item{love}{Do you love cats? Defaults to TRUE.}
-}
 \description{
-This function allows you to express your love of cats.
+scMetabolism
 }
 \examples{
 sc.metabolism()
 }
-\keyword{cats}
+\keyword{scMetabolism}

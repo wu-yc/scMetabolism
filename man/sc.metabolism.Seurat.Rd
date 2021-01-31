@@ -2,7 +2,7 @@
 % Please edit documentation in R/compute_metabolism_Seurat.R
 \name{sc.metabolism.Seurat}
 \alias{sc.metabolism.Seurat}
-\title{A Cat Function}
+\title{scMetabolism}
 \usage{
 sc.metabolism.Seurat(
   obj,
@@ -12,13 +12,10 @@ sc.metabolism.Seurat(
   metabolism.type = "KEGG"
 )
 }
-\arguments{
-\item{love}{Do you love cats? Defaults to TRUE.}
-}
 \description{
-This function allows you to express your love of cats.
+scMetabolism
 }
 \examples{
 sc.metabolism.Seurat()
 }
-\keyword{cats}
+\keyword{scMetabolism}
