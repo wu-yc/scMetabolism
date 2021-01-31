@@ -51,7 +51,7 @@ To extract the metabolism score, just run `metabolism.matrix <- countexp.Seurat@
 
 This function returns a ggplot object, which can be DIY by users.
 
-![Screenshot](https://github.com/wu-yc/scMetabolism/raw/main/scMetabolism_demo.png)
+![Screenshot](https://github.com/wu-yc/scMetabolism/raw/main/scmetab_dim.png)
 
     input.pathway<-c("Glycolysis / Gluconeogenesis", "Oxidative phosphorylation", "Citrate cycle (TCA cycle)")
     DotPlot.metabolism(obj = countexp.Seurat, pathway = input.pathway, phenotype = "ident", norm = "y")
@@ -66,7 +66,7 @@ This function returns a ggplot object, which can be DIY by users.
 
 This function returns a ggplot object, which can be DIY by users.
 
-![Screenshot](https://github.com/wu-yc/scMetabolism/raw/main/scMetabolism_demo.png)
+![Screenshot](https://github.com/wu-yc/scMetabolism/raw/main/scmetab_dot.png)
 
     BoxPlot.metabolism(obj = countexp.Seurat, pathway = input.pathway, phenotype = "ident", ncol = 1)
 
@@ -80,7 +80,7 @@ This function returns a ggplot object, which can be DIY by users.
 
 This function returns a ggplot object, which can be DIY by users.
 
-![Screenshot](https://github.com/wu-yc/scMetabolism/raw/main/scMetabolism_demo.png)
+![Screenshot](https://github.com/wu-yc/scMetabolism/raw/main/scmetab_box.png)
 
 ### 4. Quantify single-cell metabolism WITHOUT Seurat (Not recommended)
 scMetabolism also supports quantifying metabolism independent of Seurat. 
