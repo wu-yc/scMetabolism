@@ -16,10 +16,16 @@
 `scMetabolism` currently supports human scRNA-seq data.
 
 
-### 1. Load packages
+### 1. Load packages and demo data
+The demo data is the dataset of Peripheral Blood Mononuclear Cells (PBMC) from 10X Genomics open access dataset (~2,700 single cells, also used by Seurat tutorial). The demo Seurat object can be downloaded from [here](https://figshare.com/articles/dataset/scMetabolism_-_pbmc_demo_rda/13670038).
+
+
+    load(file = "pbmc_demo.rda")
+    
     library(scMetabolism)
     library(ggplot2)
     library(rsvd)
+
 
 ### 2. Quantify single-cell metabolism with Seurat (Recommended)
     countexp.Seurat<-sc.metabolism.Seurat(obj = countexp.Seurat, method = "VISION", imputation = F, ncores = 2, metabolism.type = "KEGG")
@@ -37,6 +43,8 @@
 To extract the metabolism score, just run `metabolism.matrix <- countexp.Seurat@assays$METABOLISM$score`, where `metabolism.matrix` is the matrix.
 
 ### 3. Visualize 
+#### Dimplot
+
     DimPlot.metabolism(obj = countexp.Seurat, pathway = "Glycolysis / Gluconeogenesis", dimention.reduction.type = "umap", dimention.reduction.run = F, size = 1)
 
 `countexp.Seurat` is a Seurat object containing the UMI count matrix. 
@@ -53,6 +61,8 @@ This function returns a ggplot object, which can be DIY by users.
 
 ![Screenshot](https://github.com/wu-yc/scMetabolism/raw/main/scmetab_dim.png)
 
+#### Dot plot
+
     input.pathway<-c("Glycolysis / Gluconeogenesis", "Oxidative phosphorylation", "Citrate cycle (TCA cycle)")
     DotPlot.metabolism(obj = countexp.Seurat, pathway = input.pathway, phenotype = "ident", norm = "y")
 
@@ -67,6 +77,8 @@ This function returns a ggplot object, which can be DIY by users.
 This function returns a ggplot object, which can be DIY by users.
 
 ![Screenshot](https://github.com/wu-yc/scMetabolism/raw/main/scmetab_dot.png)
+
+#### Box plot
 
     BoxPlot.metabolism(obj = countexp.Seurat, pathway = input.pathway, phenotype = "ident", ncol = 1)
 
@@ -105,6 +117,10 @@ scMetabolism also supports quantifying metabolism independent of Seurat.
 5. George C. Linderman, et al. bioRxiv 2019.
 
 
+## Online version of scMetabolism
+http://cancerdiversity.asia/scMetabolism/
+
+
 ## Contact
 
 Qiang Gao, MD, PhD
@@ -115,9 +131,10 @@ Department of Liver Surgery and Transplantation, Liver Cancer Institute, Zhongsh
 
 gaoqiang@fudan.edu.cn
 
+
 Any technical question please contact Yingcheng Wu (wuyc@usa.com).
 
-Copyright (C) 2020 Gao Lab @ Fudan University.
+Copyright (C) 2020-2021 Gao Lab @ Fudan University.
 
 
 
