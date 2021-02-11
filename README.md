@@ -125,8 +125,6 @@ http://cancerdiversity.asia/scMetabolism/
 
 Qiang Gao, MD, PhD
 
-Cheung Kong Scholar Distinguished Professor
-
 Department of Liver Surgery and Transplantation, Liver Cancer Institute, Zhongshan Hospital, Fudan University, Shanghai, China
 
 gaoqiang@fudan.edu.cn
