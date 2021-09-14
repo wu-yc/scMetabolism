@@ -110,6 +110,11 @@ scMetabolism also supports quantifying metabolism independent of Seurat.
 `metabolism.type` supports `KEGG` and `REACTOME`, where KEGG contains 85 metabolism pathways and REACTOME contains 82 metabolism pathways.
 
 ## Citations
+**_scMetabolism_**
+
+- Yingcheng Wu, Shuaixi Yang, Jiaqiang Ma, Zechuan Chen, Guohe Song, Dongning Rao, Yifei Cheng, Siyuan Huang, Yifei Liu, Shan Jiang, Jinxia Liu, Xiaowu Huang, Xiaoying Wang, Shuangjian Qiu, Jianmin Xu, Ruibin Xi, Fan Bai, Jian Zhou, Jia Fan, Xiaoming Zhang, and Qiang Gao. Spatiotemporal Immune Landscape of Colorectal Cancer Liver Metastasis at Single-Cell Level. Cancer Discovery. 2021.
+
+**_Genesets and algorithms_**
 1. DeTomaso D, et al. Nat Commun. 2019 Sep 26;10(1):4376.
 2. Aibar S, et al. Nat Methods. 2017 Nov;14(11):1083-1086.
 3. Xiao Z, et al. Nat Commun. 2019 Aug 21;10(1):3763.
