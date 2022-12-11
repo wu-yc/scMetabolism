@@ -28,7 +28,7 @@ The demo data is the dataset of Peripheral Blood Mononuclear Cells (PBMC) from 1
 
 
 ### 2. Quantify single-cell metabolism with Seurat (Recommended)
-    countexp.Seurat<-sc.metabolism.Seurat(obj = countexp.Seurat, method = "VISION", imputation = F, ncores = 2, metabolism.type = "KEGG")
+    countexp.Seurat<-sc.metabolism.Seurat(obj = countexp.Seurat, method = "AUCell", imputation = F, ncores = 2, metabolism.type = "KEGG")
 
 `obj` is a Seurat object containing the UMI count matrix. 
 
@@ -97,7 +97,7 @@ This function returns a ggplot object, which can be DIY by users.
 ### 4. Quantify single-cell metabolism WITHOUT Seurat (Not recommended)
 scMetabolism also supports quantifying metabolism independent of Seurat. 
 
-    metabolism.matrix<-sc.metabolism(countexp = countexp, method = "VISION", imputation = F, ncores = 2, metabolism.type = "KEGG")
+    metabolism.matrix<-sc.metabolism(countexp = countexp, method = "AUCell", imputation = F, ncores = 2, metabolism.type = "KEGG")
 
 `countexp` is a data frame of UMI count matrix (col is cell ID, row is gene name). 
 
