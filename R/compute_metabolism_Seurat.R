@@ -86,6 +86,8 @@ sc.metabolism.Seurat <- function(obj, method = "VISION", imputation = F, ncores 
     gsva_es <- gsva(as.matrix(countexp2), geneSets, method=c("gsva"), kcdf=c("Poisson"), parallel.sz=ncores) #
     signature_exp<-data.frame(gsva_es)
   }
+  
+  cat("Please Cite: Yingcheng Wu, Qiang Gao, et al. Cancer Discovery. 2021. https://pubmed.ncbi.nlm.nih.gov/34417225/   \nPlease!!!!\n")
 
   obj@assays$METABOLISM$score<-signature_exp
   obj
