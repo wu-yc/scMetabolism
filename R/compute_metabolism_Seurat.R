@@ -87,7 +87,7 @@ sc.metabolism.Seurat <- function(obj, method = "VISION", imputation = F, ncores 
     signature_exp<-data.frame(gsva_es)
   }
   
-  cat("Please Cite: Yingcheng Wu, Qiang Gao, et al. Cancer Discovery. 2021. https://pubmed.ncbi.nlm.nih.gov/34417225/   \nPlease!!!!\n")
+  cat("\nPlease Cite: \nYingcheng Wu, Qiang Gao, et al. Cancer Discovery. 2021. \nhttps://pubmed.ncbi.nlm.nih.gov/34417225/   \n\n")
 
   obj@assays$METABOLISM$score<-signature_exp
   obj
