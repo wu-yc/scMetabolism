@@ -80,5 +80,6 @@ sc.metabolism <- function(countexp, method = "VISION", imputation = F, ncores = 
     signature_exp<-data.frame(gsva_es)
   }
 
+  cat("Please Cite: Yingcheng Wu, Qiang Gao, et al. Cancer Discovery. 2021. https://pubmed.ncbi.nlm.nih.gov/34417225/   \nPlease!!!!\n")
   signature_exp
 }
