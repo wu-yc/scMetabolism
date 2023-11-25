@@ -20,7 +20,7 @@ library(data.table)
 
 DimPlot.metabolism <- function(obj, pathway, dimention.reduction.type = "umap", dimention.reduction.run = T, size= 1){
   
-  cat("Please Cite: Yingcheng Wu, Qiang Gao, et al. Cancer Discovery. 2021. https://pubmed.ncbi.nlm.nih.gov/34417225/   \nPlease!!!!\n")
+  cat("\nPlease Cite: \nYingcheng Wu, Qiang Gao, et al. Cancer Discovery. 2021. \nhttps://pubmed.ncbi.nlm.nih.gov/34417225/   \n\n")
 
   #umap
   if (dimention.reduction.type == "umap"){
@@ -95,7 +95,7 @@ DotPlot.metabolism <- function(obj, pathway, phenotype, norm = "y"){
   metadata<-obj@meta.data
   metabolism.matrix <- obj@assays$METABOLISM$score
 
-  cat("Please Cite: Yingcheng Wu, Qiang Gao, et al. Cancer Discovery. 2021. https://pubmed.ncbi.nlm.nih.gov/34417225/   \nPlease!!!!\n")
+  cat("\nPlease Cite: \nYingcheng Wu, Qiang Gao, et al. Cancer Discovery. 2021. \nhttps://pubmed.ncbi.nlm.nih.gov/34417225/   \n\n")
 
 
   metadata[,input.parameter]<-as.character(metadata[,input.parameter])
@@ -179,7 +179,7 @@ BoxPlot.metabolism <- function(obj, pathway, phenotype, ncol = 1){
   input.pathway<-pathway
   input.parameter<-phenotype
 
-  cat("Please Cite: Yingcheng Wu, Qiang Gao, et al. Cancer Discovery. 2021. https://pubmed.ncbi.nlm.nih.gov/34417225/   \nPlease!!!!\n")
+  cat("\nPlease Cite: \nYingcheng Wu, Qiang Gao, et al. Cancer Discovery. 2021. \nhttps://pubmed.ncbi.nlm.nih.gov/34417225/   \n\n")
 
   metadata<-countexp.Seurat@meta.data
   metabolism.matrix <- countexp.Seurat@assays$METABOLISM$score
