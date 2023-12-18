@@ -79,7 +79,7 @@ sc.metabolism.Seurat <- function(obj, method = "VISION", imputation = F, ncores 
   }
 
   #GSVA
-  if (method == "ssGSEA") {
+  if (method == "GSVA") {
     library(GSVA)
     library(GSEABase)
     geneSets <- getGmt(gmtFile) #signature read
