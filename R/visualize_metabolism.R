@@ -28,6 +28,9 @@ DimPlot.metabolism <- function(obj, pathway, dimention.reduction.type = "umap", 
     if (dimention.reduction.run == T) obj <- Seurat::RunUMAP(obj, reduction = "pca", dims = 1:40)
     umap.loc<-obj@reductions$umap@cell.embeddings
 
+    # This is necessary if the seurat reduction uses a different @key:
+    col.names(umap.loc) <- c('UMAP_1', 'UMAP_2')
+    
     row.names(umap.loc)<-colnames(obj)
     signature_exp<-obj@assays$METABOLISM$score
 
@@ -58,6 +61,9 @@ DimPlot.metabolism <- function(obj, pathway, dimention.reduction.type = "umap", 
     if (dimention.reduction.run == T) obj <- Seurat::RunTSNE(obj, reduction = "pca", dims = 1:40)
     tsne.loc<-obj@reductions$tsne@cell.embeddings
 
+    # This is necessary if the seurat reduction uses a different @key:
+    col.names(tsne.loc) <- c('tSNE_1', 'tSNE_2')
+    
     row.names(tsne.loc)<-colnames(obj)
     signature_exp<-obj@assays$METABOLISM$score
 
