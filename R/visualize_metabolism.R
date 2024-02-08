@@ -12,11 +12,9 @@
 #' @export DimPlot.metabolism
 #' @export DotPlot.metabolism
 #' @export BoxPlot.metabolism
-
-
-library(ggplot2)
-library(wesanderson)
-library(data.table)
+#' @import ggplot2
+#' @import wesanderson
+#' @import data.table
 
 DimPlot.metabolism <- function(obj, pathway, dimention.reduction.type = "umap", dimention.reduction.run = T, size= 1){
   
@@ -28,6 +26,9 @@ DimPlot.metabolism <- function(obj, pathway, dimention.reduction.type = "umap", 
     if (dimention.reduction.run == T) obj <- Seurat::RunUMAP(obj, reduction = "pca", dims = 1:40)
     umap.loc<-obj@reductions$umap@cell.embeddings
 
+    # This is necessary if the seurat reduction uses a different @key:
+    col.names(umap.loc) <- c('UMAP_1', 'UMAP_2')
+    
     row.names(umap.loc)<-colnames(obj)
     signature_exp<-obj@assays$METABOLISM$score
 
@@ -35,8 +36,7 @@ DimPlot.metabolism <- function(obj, pathway, dimention.reduction.type = "umap", 
 
     signature_ggplot<-data.frame(umap.loc, t(signature_exp[input.pathway,]))
 
-    library(wesanderson)
-    pal <- wes_palette("Zissou1", 100, type = "continuous")
+    pal <- wesanderson::wes_palette("Zissou1", 100, type = "continuous")
 
 
     library(ggplot2)
@@ -58,6 +58,9 @@ DimPlot.metabolism <- function(obj, pathway, dimention.reduction.type = "umap", 
     if (dimention.reduction.run == T) obj <- Seurat::RunTSNE(obj, reduction = "pca", dims = 1:40)
     tsne.loc<-obj@reductions$tsne@cell.embeddings
 
+    # This is necessary if the seurat reduction uses a different @key:
+    col.names(tsne.loc) <- c('tSNE_1', 'tSNE_2')
+    
     row.names(tsne.loc)<-colnames(obj)
     signature_exp<-obj@assays$METABOLISM$score
 
@@ -67,8 +70,6 @@ DimPlot.metabolism <- function(obj, pathway, dimention.reduction.type = "umap", 
 
     pal <- wes_palette("Zissou1", 100, type = "continuous")
 
-
-    library(ggplot2)
     plot <- ggplot(data=signature_ggplot, aes(x=tSNE_1, y=tSNE_2, color = signature_ggplot[,3])) +  #this plot is great
       geom_point(size = size) +
       scale_fill_gradientn(colours = pal) +
@@ -155,11 +156,7 @@ DotPlot.metabolism <- function(obj, pathway, phenotype, norm = "y"){
   gg_table_median_norm<-data.frame(gg_table_median_norm)
   gg_table_median_norm[,3]<-as.numeric(as.character(gg_table_median_norm[,3]))
 
-
-
-
-  library(wesanderson)
-  pal <- wes_palette("Zissou1", 100, type = "continuous")
+  pal <- wesanderson::wes_palette("Zissou1", 100, type = "continuous")
 
   ggplot(data=gg_table_median_norm, aes(x=gg_table_median_norm[,1], y=gg_table_median_norm[,2], color = gg_table_median_norm[,3])) +
     geom_point(data=gg_table_median_norm, aes(size = gg_table_median_norm[,3])) + #geom_line() +
