@@ -181,8 +181,8 @@ BoxPlot.metabolism <- function(obj, pathway, phenotype, ncol = 1){
 
   cat("\nPlease Cite: \nYingcheng Wu, Qiang Gao, et al. Cancer Discovery. 2021. \nhttps://pubmed.ncbi.nlm.nih.gov/34417225/   \n\n")
 
-  metadata<-countexp.Seurat@meta.data
-  metabolism.matrix <- countexp.Seurat@assays$METABOLISM$score
+  metadata<-obj@meta.data
+  metabolism.matrix <- obj@assays$METABOLISM$score
 
 
 
