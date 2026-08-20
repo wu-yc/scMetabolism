@@ -9,7 +9,7 @@
 
 ## Requirements
     install.packages(c("devtools", "data.table", "wesanderson", "Seurat", "devtools", "AUCell", "GSEABase", "GSVA", "ggplot2","rsvd"))
-    devtools::install_github("YosefLab/VISION@v2.1.0") #Please note that the version would be v2.1.0
+    devtools::install_github("YosefLab/VISION@v3.0.2") # VISION v2.1.0 also works, but its older dependencies may fail to install in newer R environments
     
 
 ## Install
@@ -126,11 +126,6 @@ scMetabolism also supports quantifying metabolism independent of Seurat.
 4. Hänzelmann S, et al. BMC Bioinformatics. 2013 Jan 16;14:7.
 5. George C. Linderman, et al. bioRxiv 2019.
 
-
-## Online version of scMetabolism
-http://cancerdiversity.asia/scMetabolism/
-
-
 ## Contact
 
 Qiang Gao, MD, PhD
@@ -147,5 +142,3 @@ Copyright (C) 2020-2023 Gao Lab @ Fudan University.
 ## Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=wu-yc/scMetabolism&type=date&legend=top-left)](https://www.star-history.com/#wu-yc/scMetabolism&type=date&legend=top-left)
-
-
